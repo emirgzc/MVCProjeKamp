@@ -1,7 +1,11 @@
 ﻿
+@model IEnumerable<EntityLayer.Concrete.Category>
+
 @{
     Layout = null;
 }
+
+<link href="~/Content/bootstrap.min.css" rel="stylesheet" />
 
 <h3>Mvc Kamp Örneği</h3>
 <br />
@@ -12,11 +16,14 @@
         <th>AÇIKLAMA</th>
         <th>DURUM</th>
     </tr>
-    <tr>
-        <td>1</td>
-        <td>Eğitim</td>
-        <td>Açıklama kısmı burası</td>
-        <td>true</td>
-    </tr>
+    @foreach (var x in Model)
+    {
+        <tr>
+            <td>@x.CategoryID</td>
+            <td>@x.CategoryName</td>
+            <td>@x.CategoryDescription.Substring(0,100)</td>
+            <td>@x.CategoryStatus</td>
+        </tr>
+    }
 
 </table>

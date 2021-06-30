@@ -1,0 +1,37 @@
+﻿
+@model EntityLayer.Concrete.Category
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<br />
+<div class="row">
+    <div style="width:200px; height:200px; background-color:yellow; margin-left:15px;">
+        <span style="font-size:100px; margin-left:45px;">@ViewBag.count</span>
+        <br />
+        <span class="ml-4">Toplam Kategori Sayısı</span>
+    </div>
+    <div style="width:200px; height:200px; background-color:red; margin-left:15px;">
+        <span style="font-size:100px; margin-left:45px;">@ViewBag.headcount</span>
+        <br />
+        <span class="ml-4">Yazılım Kategorisine Ait Başlık Sayısı</span>
+    </div>
+    <div style="width:200px; height:200px; background-color:green; margin-left:15px;">
+        <span style="font-size:100px; margin-left:45px;">@ViewBag.Acount</span>
+        <br />
+        <span class="ml-1">Yazar adında 'a' harfi geçen yazar sayısı</span>
+    </div>
+    <div style="width:200px; height:200px; background-color:orange; margin-left:15px;">
+        <span style="font-size:100px; margin-left:45px;">@ViewBag.status</span>
+        <br />
+        <span class="ml-1">Status Sayısal fark</span>
+    </div>
+    <div style="width:200px; height:200px; background-color:purple; margin-left:15px;">
+        <span style="font-size:100px; margin-left:25px;">@ViewBag.head</span>
+        <br />
+        <span class="ml-1"> En fazla başlığa sahip kategori adı</span>
+    </div>
+</div>
+

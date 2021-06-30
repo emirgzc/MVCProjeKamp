@@ -97,3 +97,5 @@ C:\Users\muham\source\repos\MvcProjeKampi\MvcProjeKampi\obj\Debug\MvcProjeKampi.
 C:\Users\muham\source\repos\MvcProjeKampi\MvcProjeKampi\obj\Debug\MvcProjeKampi.csproj.CopyComplete
 C:\Users\muham\source\repos\MvcProjeKampi\MvcProjeKampi\obj\Debug\MvcProjeKampi.dll
 C:\Users\muham\source\repos\MvcProjeKampi\MvcProjeKampi\obj\Debug\MvcProjeKampi.pdb
+C:\Users\muham\source\repos\MvcProjeKampi\MvcProjeKampi\bin\FluentValidation.dll
+C:\Users\muham\source\repos\MvcProjeKampi\MvcProjeKampi\bin\FluentValidation.xml

@@ -16,3 +16,5 @@ C:\Users\muham\source\repos\MvcProjeKampi\BusinessLayer\obj\Debug\BusinessLayer.
 C:\Users\muham\source\repos\MvcProjeKampi\BusinessLayer\obj\Debug\BusinessLayer.csproj.CopyComplete
 C:\Users\muham\source\repos\MvcProjeKampi\BusinessLayer\obj\Debug\BusinessLayer.dll
 C:\Users\muham\source\repos\MvcProjeKampi\BusinessLayer\obj\Debug\BusinessLayer.pdb
+C:\Users\muham\source\repos\MvcProjeKampi\BusinessLayer\bin\Debug\FluentValidation.dll
+C:\Users\muham\source\repos\MvcProjeKampi\BusinessLayer\bin\Debug\FluentValidation.xml
