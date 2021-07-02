@@ -9,18 +9,18 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-
-    <title>Admin | Panel</title>
-
+    <title>AdminLTE 3 | Dashboard 3</title>
     <!-- Font Awesome Icons -->
     <link rel="stylesheet" href="~/mvckampadmin/plugins/fontawesome-free/css/all.min.css">
     <!-- IonIcons -->
     <link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+    <link rel="stylesheet" href="~/mvckampadmin/plugins/ekko-lightbox/ekko-lightbox.css">
     <!-- Theme style -->
     <link rel="stylesheet" href="~/mvckampadmin/dist/css/adminlte.min.css">
     <!-- Google Font: Source Sans Pro -->
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
 </head>
+
 <!--
 BODY TAG OPTIONS:
 =================
@@ -59,17 +59,21 @@ to get the desired effect
                     <nav class="mt-2">
                         <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
                             <!-- Add icons to the links using the .nav-icon class
-         with font-awesome or any other icon font library -->
-                            <li class="nav-item has-treeview menu-open">
-                                <a href="#" class="nav-link">
-                                    <i class="nav-icon fas fa-tachometer-alt"></i>
-                                    <p>
-                                        Kategoriler
-                                    </p>
-                                </a>
-                            </li>
+                            with font-awesome or any other icon font library -->
+                            @if (User.IsInRole("B"))
+                            {
+                                <li class="nav-item has-treeview">
+                                    <a href="/AdminCategory/Index/" class="nav-link">
+                                        <i class="nav-icon fas fa-tachometer-alt"></i>
+                                        <p>
+                                            Kategoriler
+                                        </p>
+                                    </a>
+                                </li>
+                            }
+
                             <li class="nav-item">
-                                <a href="pages/widgets.html" class="nav-link">
+                                <a href="/Heading/Index/" class="nav-link">
                                     <i class="nav-icon fas fa-th"></i>
                                     <p>
                                         Başlıklar
@@ -77,7 +81,7 @@ to get the desired effect
                                 </a>
                             </li>
                             <li class="nav-item has-treeview">
-                                <a href="#" class="nav-link">
+                                <a href="/Writer/Index/" class="nav-link">
                                     <i class="nav-icon fas fa-copy"></i>
                                     <p>
                                         Yazarlar
@@ -102,7 +106,7 @@ to get the desired effect
                                 </ul>
                             </li>
                             <li class="nav-item has-treeview">
-                                <a href="#" class="nav-link">
+                                <a href="/About/Index/" class="nav-link">
                                     <i class="nav-icon fas fa-tree"></i>
                                     <p>
                                         Hakkımızda
@@ -110,7 +114,7 @@ to get the desired effect
                                 </a>
                             </li>
                             <li class="nav-item has-treeview">
-                                <a href="#" class="nav-link">
+                                <a href="/Contact/Index/" class="nav-link">
                                     <i class="nav-icon fas fa-edit"></i>
                                     <p>
                                         İletişim & Mesajlar
@@ -134,7 +138,7 @@ to get the desired effect
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a href="pages/gallery.html" class="nav-link">
+                                <a href="/Gallery/Index/" class="nav-link">
                                     <i class="nav-icon far fa-image"></i>
                                     <p>
                                         Galeri
@@ -142,7 +146,7 @@ to get the desired effect
                                 </a>
                             </li>
                             <li class="nav-item has-treeview">
-                                <a href="#" class="nav-link">
+                                <a href="/ErrorPage/Page404/" class="nav-link">
                                     <i class="nav-icon far fa-envelope"></i>
                                     <p>
                                         Hata Sayfaları
@@ -169,7 +173,8 @@ to get the desired effect
                     </nav>
                     <!-- /.sidebar-menu -->
                 </div>
-                <!-- /.sidebar -->
+            </div>
+            <!-- /.sidebar -->
         </aside>
 
         <!-- Content Wrapper. Contains page content -->
@@ -180,18 +185,34 @@ to get the desired effect
         </div>
 
     </div>
-    <!-- ./wrapper -->
-    <!-- REQUIRED SCRIPTS -->
-    <!-- jQuery -->
     <script src="~/mvckampadmin/plugins/jquery/jquery.min.js"></script>
     <!-- Bootstrap -->
     <script src="~/mvckampadmin/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <!-- AdminLTE -->
-    <script src="~/mvckampadmin/dist/js/adminlte.js"></script>
-
-    <!-- OPTIONAL SCRIPTS -->
-    <script src="~/mvckampadmin/plugins/chart.js/Chart.min.js"></script>
+    <!-- jQuery UI -->
+    <script src="~/mvckampadmin/plugins/jquery-ui/jquery-ui.min.js"></script>
+    <!-- Ekko Lightbox -->
+    <script src="~/mvckampadmin/plugins/ekko-lightbox/ekko-lightbox.min.js"></script>
+    <!-- AdminLTE App -->
+    <script src="~/mvckampadmin/dist/js/adminlte.min.js"></script>
+    <!-- AdminLTE for demo purposes -->
     <script src="~/mvckampadmin/dist/js/demo.js"></script>
-    <script src="~/mvckampadmin/dist/js/pages/dashboard3.js"></script>
+    <!-- Filterizr-->
+    <script src="~/mvckampadmin/plugins/filterizr/jquery.filterizr.min.js"></script>
+    <!-- Page specific script -->
+    <script>
+        $(function () {
+            $(document).on('click', '[data-toggle="lightbox"]', function (event) {
+                event.preventDefault();
+                $(this).ekkoLightbox({
+                    alwaysShowClose: true
+                });
+            });
+
+            $('.filter-container').filterizr({ gutterPixels: 3 });
+            $('.btn[data-filter]').on('click', function () {
+                $('.btn[data-filter]').removeClass('active');
+                $(this).addClass('active');
+            });
+        })</script>
 </body>
 </html>

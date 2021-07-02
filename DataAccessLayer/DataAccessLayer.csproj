@@ -52,20 +52,63 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Abstract\IAboutDal.cs" />
+    <Compile Include="Abstract\IAdminDal.cs" />
     <Compile Include="Abstract\ICategoryDal.cs" />
     <Compile Include="Abstract\IContactDal.cs" />
+    <Compile Include="Abstract\IContentDal.cs" />
     <Compile Include="Abstract\IHeadingDal.cs" />
+    <Compile Include="Abstract\IImageFileDal.cs" />
+    <Compile Include="Abstract\IMessageDal.cs" />
     <Compile Include="Abstract\IRepository.cs" />
     <Compile Include="Abstract\IWriterDal.cs" />
     <Compile Include="Concrete\Context.cs" />
     <Compile Include="Concrete\Repositories\CategoryRepository.cs" />
     <Compile Include="Concrete\Repositories\GenericRepository.cs" />
     <Compile Include="EntityFramework\EfAboutDal.cs" />
+    <Compile Include="EntityFramework\EfAdminDal.cs" />
     <Compile Include="EntityFramework\EfCategoryDal.cs" />
     <Compile Include="EntityFramework\EfContactDal.cs" />
     <Compile Include="EntityFramework\EfContentDal.cs" />
     <Compile Include="EntityFramework\EfHeadingDal.cs" />
+    <Compile Include="EntityFramework\EfImageFileDal.cs" />
+    <Compile Include="EntityFramework\EfMessageDal.cs" />
     <Compile Include="EntityFramework\EfWriterDal.cs" />
+    <Compile Include="Migrations\202107010611022_mig1.cs" />
+    <Compile Include="Migrations\202107010611022_mig1.designer.cs">
+      <DependentUpon>202107010611022_mig1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202107010703514_mig-2.cs" />
+    <Compile Include="Migrations\202107010703514_mig-2.designer.cs">
+      <DependentUpon>202107010703514_mig-2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202107010923253_mig-3.cs" />
+    <Compile Include="Migrations\202107010923253_mig-3.designer.cs">
+      <DependentUpon>202107010923253_mig-3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202107011002276_mig-content-update-status.cs" />
+    <Compile Include="Migrations\202107011002276_mig-content-update-status.designer.cs">
+      <DependentUpon>202107011002276_mig-content-update-status.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202107011004331_mig-headstatus.cs" />
+    <Compile Include="Migrations\202107011004331_mig-headstatus.designer.cs">
+      <DependentUpon>202107011004331_mig-headstatus.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202107011326390_mig-4.cs" />
+    <Compile Include="Migrations\202107011326390_mig-4.designer.cs">
+      <DependentUpon>202107011326390_mig-4.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202107011453443_mig-5.cs" />
+    <Compile Include="Migrations\202107011453443_mig-5.designer.cs">
+      <DependentUpon>202107011453443_mig-5.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202107011915135_add-gallery.cs" />
+    <Compile Include="Migrations\202107011915135_add-gallery.designer.cs">
+      <DependentUpon>202107011915135_add-gallery.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202107020550448_mig-admin-add.cs" />
+    <Compile Include="Migrations\202107020550448_mig-admin-add.designer.cs">
+      <DependentUpon>202107020550448_mig-admin-add.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -78,6 +121,35 @@
       <Project>{44668ca5-6df7-405d-8c5f-020c66c54ac9}</Project>
       <Name>EntityLayer</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\202107010611022_mig1.resx">
+      <DependentUpon>202107010611022_mig1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202107010703514_mig-2.resx">
+      <DependentUpon>202107010703514_mig-2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202107010923253_mig-3.resx">
+      <DependentUpon>202107010923253_mig-3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202107011002276_mig-content-update-status.resx">
+      <DependentUpon>202107011002276_mig-content-update-status.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202107011004331_mig-headstatus.resx">
+      <DependentUpon>202107011004331_mig-headstatus.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202107011326390_mig-4.resx">
+      <DependentUpon>202107011326390_mig-4.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202107011453443_mig-5.resx">
+      <DependentUpon>202107011453443_mig-5.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202107011915135_add-gallery.resx">
+      <DependentUpon>202107011915135_add-gallery.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202107020550448_mig-admin-add.resx">
+      <DependentUpon>202107020550448_mig-admin-add.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

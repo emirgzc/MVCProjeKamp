@@ -15,6 +15,7 @@ namespace EntityLayer.Concrete
         [StringLength(80)]
         public string HeadingName { get; set; }
         public DateTime HeadingDate { get; set; }
+        public bool HeadingStatus { get; set; }
         public int CategoryID { get; set; }
         public virtual Category Category { get; set; }
         public ICollection<Content> Contents { get; set; } /* bir başlık birden fazla yazıda olabilir*/
